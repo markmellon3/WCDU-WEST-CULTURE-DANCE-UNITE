@@ -303,6 +303,96 @@
                 height: 140px;
             }
         }
+        .about-section {
+  padding: 100px 5%;
+  background: #0a0a0a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-flame {
+  flex: 0 0 220px;
+  text-align: center;
+}
+
+.about-flame img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 64, 129, 0.4);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.about-text h3 {
+  color: #ff4081;
+  margin: 2.5rem 0 1.2rem;
+  font-size: 1.8rem;
+}
+
+.about-text ul {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding-left: 1.8rem;
+}
+
+.about-text ul li {
+  margin-bottom: 0.9rem;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.about-text ul li::before {
+  content: "→";
+  color: #ff4081;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.support-ways li::before {
+  content: "•";
+}
+
+.closing {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffddcc;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-flame {
+    margin-bottom: 2rem;
+  }
+}
     </style>
 </head>
 <body>
@@ -342,34 +432,62 @@
     </section>
 
     <!-- Example Sections (with scroll animation) -->
-    <section id="about">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <div class="about-flame">
-                <img src="https://ik.imagekit.io/s95tumxuk/Gemini_Generated_Image_7xjzql7xjzql7xjz.png" alt="Flame Symbol">
-                <!-- You can replace this src with a different flame image if desired -->
-            </div>
-            <p>We are a high-energy dance collective specializing in hip-hop, contemporary fusion, and street styles. Our mission is to inspire, create, and perform with unmatched intensity.
-            At WEST CULTURE DANCE UNIT, donations are at the heart of what we do. We don't just collect support—we actively distribute it to create lasting change in our communities here in Kampala,
-                Central Region, and surrounding areas.What we do through donations:
+   <section id="about" class="about-section">
+  <div class="container">
+    <h2>About Us</h2>
 
-Provide food packages and groceries to vulnerable families and elderly people
-Supply school materials, uniforms, and fees to help children stay in education
-Offer clothing, blankets, and hygiene items during tough seasons
-Support medical needs, like medicines or hospital contributions for the sick
-Assist orphans, single mothers, and low-income households with emergency aid
+    <div class="about-content">
+      <div class="about-flame">
+        <img 
+          src="https://ik.imagekit.io/s95tumxuk/Gemini_Generated_Image_7xjzql7xjzql7xjz.png" 
+          alt="WCDU Flame Symbol"
+          loading="lazy"
+        >
+      </div>
 
-We carry out these donations regularly—monthly drives, special holiday distributions, and urgent responses when crises arise. Everything is done transparently: we share photos/videos of deliveries (with privacy respected), receipts where possible, and stories of real impact.
-Your support matters! Whether it's:
+      <div class="about-text">
+        <p>
+          We are a high-energy dance collective based in Kampala, specializing in hip-hop, contemporary fusion, and street styles. 
+          Our mission is to inspire, create, and perform with unmatched intensity and passion.
+        </p>
 
-Cash contributions (via mobile money, bank, etc.)
-In-kind donations (food, clothes, books, etc.)
-Volunteering time to help pack/distribute
-Spreading the word to friends/family
+        <p>
+          At <strong>WEST CULTURE DANCE UNIT</strong>, donations are at the heart of what we do. 
+          We don’t just collect support — we actively distribute it to create real, lasting change in our communities across Kampala, 
+          the Central Region, and surrounding areas.
+        </p>
 
-...every bit helps someone smile, eat, learn, or heal.</p>
-        </div>
-    </section>
+        <h3>What we do through your donations:</h3>
+        <ul>
+          <li>Provide food packages and groceries to vulnerable families and elderly people</li>
+          <li>Supply school materials, uniforms, and fees to help children stay in education</li>
+          <li>Offer clothing, blankets, and hygiene items during tough seasons</li>
+          <li>Support medical needs — medicines, hospital bills, and emergency care for the sick</li>
+          <li>Assist orphans, single mothers, and low-income households with urgent aid</li>
+        </ul>
+
+        <p>
+          We carry out these donations regularly — through monthly drives, special holiday distributions, 
+          and immediate responses during crises. Everything is done transparently: we share photos and videos of deliveries 
+          (with privacy respected), receipts where possible, and real stories of impact.
+        </p>
+
+        <h3>Your support truly matters!</h3>
+        <p>Whether through:</p>
+        <ul class="support-ways">
+          <li>Cash contributions (mobile money, bank transfer, etc.)</li>
+          <li>In-kind donations (food, clothes, books, school supplies, etc.)</li>
+          <li>Volunteering your time to help pack or distribute</li>
+          <li>Spreading the word to friends, family, and your community</li>
+        </ul>
+
+        <p class="closing">
+          Every bit helps someone smile, eat, learn, stay warm, or heal. Thank you for believing in us and helping keep the culture — and hope — alive.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <footer>
         <p>© 2026 WEST CULTURE DANCE UNIT — Burn Bright</p>
@@ -403,3 +521,4 @@ Spreading the word to friends/family
 </body>
 
 </html>
+
