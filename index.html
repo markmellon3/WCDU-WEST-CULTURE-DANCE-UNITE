@@ -43,11 +43,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-                        url('https://ik.imagekit.io/s95tumxuk/WhatsApp%20Image%202026-02-16%20at%2020.33.27.jpeg') center/cover no-repeat fixed;
+            background: 
+                linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.30)),
+                url('https://ik.imagekit.io/s95tumxuk/WhatsApp%20Image%202026-02-16%20at%2020.33.27.jpeg') center/cover no-repeat;
             z-index: -1;
-            filter: brightness(0.85);
+            background-attachment: scroll;   /* Better for mobile */
         }
+        
 
         /* Glassmorphism */
         .glass {
@@ -532,27 +534,28 @@
     </footer>
 
     <script>
-        // Firebase Config - Replace with your own
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBmEy3DcuhuSsPxQml332xalyQJVWLd4uw",
-  authDomain: "wcdu-955cb.firebaseapp.com",
-  databaseURL: "https://wcdu-955cb-default-rtdb.firebaseio.com",
-  projectId: "wcdu-955cb",
-  storageBucket: "wcdu-955cb.firebasestorage.app",
-  messagingSenderId: "381070884807",
-  appId: "1:381070884807:web:e02f4e3e3e34399f50e3e2",
-  measurementId: "G-2DXFQ992WK"
-};
-
+               // Firebase Config - Updated
+        const firebaseConfig = {
+            apiKey: "AIzaSyBmEy3DcuhuSsPxQml332xalyQJVWLd4uw",
+            authDomain: "wcdu-955cb.firebaseapp.com",
+            databaseURL: "https://wcdu-955cb-default-rtdb.firebaseio.com",
+            projectId: "wcdu-955cb",
+            storageBucket: "wcdu-955cb.firebasestorage.app",
+            messagingSenderId: "381070884807",
+            appId: "1:381070884807:web:e02f4e3e3e34399f50e3e2",
+            measurementId: "G-2DXFQ992WK"
+        };
+        
         let db;
 
-        function initFirebase() {
+               function initFirebase() {
             try {
                 const app = firebase.initializeApp(firebaseConfig);
                 db = firebase.database(app);
-            } catch(e) {
-                console.warn("Firebase not configured");
+                console.log("%c✅ Firebase connected successfully", "color:#9c27b0;font-weight:bold");
+            } catch (e) {
+                console.error("Firebase initialization error:", e);
+                db = null;
             }
         }
 
